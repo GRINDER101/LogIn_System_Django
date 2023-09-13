@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from pythondjango import settings
 from django.core.mail import send_mail, EmailMessage
-from django.contrib.sites.shortcuts import get_current_site
+# from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
@@ -75,11 +75,11 @@ def signup(request):
 
         # EMAIL ADDRESS CONFIRMATION LINK (the user won't be able to get the access to signup to register their information in the data-base until or unless the user confirmed their identity by clicking the confirmation link sent to their email-address)
 
-        current_site = get_current_site(request)
+        # current_site = get_current_site(request)
         email_subject = "Confirmation Email Link -(PythonDjango) App"
         email_message = render_to_string("email_confirmation.html",{
             'name' : myuser.first_name,
-            'domain' : current_site.domain,
+            # 'domain' : current_site.domain,
             'uid' : urlsafe_base64_encode(force_bytes(myuser.pk)),
             'token': generate_token.make_token(myuser),
         })
