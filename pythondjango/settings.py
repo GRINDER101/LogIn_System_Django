@@ -18,7 +18,7 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = "PGPASSWORD=zSpJ9tOTMjv300QHbat7 psql -h containers-us-west-139.railway.app -U postgres -p 7835 -d railway"
+# DATABASE_URL = "PGPASSWORD=zSpJ9tOTMjv300QHbat7 psql -h containers-us-west-139.railway.app -U postgres -p 7835 -d railway"
 
 EMAIL_BACKEND = EMAIL_BACKEND
 EMAIL_USE_TLS = EMAIL_USE_TLS
@@ -95,20 +95,20 @@ WSGI_APPLICATION = "pythondjango.wsgi.application"
 #     }
 # }
 
-# DATABASES ={
-#     "default": {
-#         "ENGINE" : "django.db.backends.sqlite3",
-#         "NAME" : "railway",
-#         "USER" : "postgres",
-#         "PASSWORD" : "zSpJ9tOTMjv300QHbat7",
-#         "HOST" : "containers-us-west-139.railway.app",
-#         "PORT" : "7835",
-#     }
-# }
-
-DATABASES = {
-    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+DATABASES ={
+    "default": {
+        "ENGINE" : "django.db.backends.sqlite3",
+        "NAME" : "railway",
+        "USER" : "postgres",
+        "PASSWORD" : "zSpJ9tOTMjv300QHbat7",
+        "HOST" : "containers-us-west-139.railway.app",
+        "PORT" : "7835",
+    }
 }
+
+# DATABASES = {
+#     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+# }
 
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 # DATABASES['default']['OPTIONS']['charset'] = 'utf8mb4'
