@@ -83,7 +83,7 @@ WSGI_APPLICATION = "pythondjango.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-import dj_database_url
+# import dj_database_url
 
 # DATABASES = {
 #     "default": {
@@ -108,6 +108,22 @@ DATABASES ={
 # DATABASES['default']['OPTIONS']['charset'] = 'utf8mb4'
 # del DATABASES['default']['OPTIONS']['sslmode'] 
 # DATABASES['default']['OPTIONS']['ssl'] =  {'ca': os.environ.get('MYSQL_ATTR_SSL_CA')}
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "my_database",
+#         "OPTIONS": {
+#             # Tell MySQLdb to connect with 'utf8mb4' character set
+#             "charset": "utf8mb4",
+#         },
+#         # Tell Django to build the test database with the 'utf8mb4' character set
+#         "TEST": {
+#             "CHARSET": "utf8mb4",
+#             "COLLATION": "utf8mb4_unicode_ci",
+#         },
+#     }
+# }
 
 
 # Password validation
