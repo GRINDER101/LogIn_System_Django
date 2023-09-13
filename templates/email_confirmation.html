@@ -7,6 +7,6 @@ It's a confirmation email from (PythonDjango) team.
 
 You need to confirm below link to activate your account.
 
-Click on this link: http://127.0.0.1:8000/{% url 'activate' uidb64=uid token=token %}
+Click on this link: https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
 
 {% endautoescape %}
