@@ -165,6 +165,7 @@ STATIC_URL = "static/"
 #     os.path.join (BASE_DIR / "static")
 # ]
 STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
+'NAME': os.path.join(BASE_DIR , 'db.sqlite3'),
 
 
 # Default primary key field type
